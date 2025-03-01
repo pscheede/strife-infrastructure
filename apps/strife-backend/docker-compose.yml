@@ -1,0 +1,9 @@
+services:
+  strife-backend:
+    build: .
+    container_name: strife_backend
+    volumes:
+      - ./:/opt/app
+    ports:
+      - 8424:8080
+    restart: unless-stopped
