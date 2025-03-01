@@ -11,9 +11,23 @@
 7. `sudo -u strifeuser .venv/bin/pip install -r requirements.txt`
 8. create .env file with `GH_TOKEN` secret
 9. run `./modify-sudoers.bash`, then follow the instruction in the output
-10. symlink service TODO
-11. enable and start service TODO
-12. TODO nginx config
+10. Create a symlink for the service:
+    ```bash
+    sudo ln -s /opt/strife/strife.service /etc/systemd/system/strife.service
+    ```
+
+11. Reload the systemd manager configuration:
+    ```bash
+    sudo systemctl daemon-reload
+    ```
+
+12. Enable and start the Strife service:
+    ```bash
+    sudo systemctl enable strife
+    sudo systemctl start strife
+    ```
+
+13. Configure Nginx (TODO)
 
 ## Roadmap
 - webserver for webhooks
