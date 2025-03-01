@@ -16,11 +16,7 @@ app = FastAPI(lifespan=lifespan)
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
-
-@app.get("/ping")
-async def ping():
-    return {"message": "Pong"}
+    return {"message": "This is the strife infrastructure service"}
 
 @app.get("/webhook/strife-backend/{asset_id}")
 async def webhook_strife_backend(asset_id: str, background_tasks: BackgroundTasks):
