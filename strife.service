@@ -1,0 +1,12 @@
+[Unit]
+Description=Strife Infrastructure Service
+After=network.target
+
+[Service]
+User=strifeuser
+WorkingDirectory=/opt/strife
+ExecStart=/opt/strife/.venv/bin/fastapi run /opt/strife/main.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

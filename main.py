@@ -1,13 +1,10 @@
 from contextlib import asynccontextmanager
-from dotenv.main import dotenv_values
 from fastapi import FastAPI, BackgroundTasks
 from apps.docker import StrifeBackend
 from apps.pull import pull_strife_backend
 from dotenv import load_dotenv
 
 load_dotenv()
-config = dotenv_values(".env")
-print(config)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
