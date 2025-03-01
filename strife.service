@@ -5,7 +5,7 @@ After=network.target
 [Service]
 User=strifeuser
 WorkingDirectory=/opt/strife
-ExecStart=/opt/strife/.venv/bin/fastapi run /opt/strife/main.py
+ExecStart=/opt/strife/.venv/bin/fastapi run --host 127.0.0.1 --port 10100 /opt/strife/main.py
 Restart=always
 
 [Install]

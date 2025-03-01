@@ -5,5 +5,5 @@ services:
     volumes:
       - ./:/opt/app
     ports:
-      - 8424:8080
+      - "127.0.0.1:10101:8080"
     restart: unless-stopped

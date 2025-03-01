@@ -29,6 +29,11 @@
 
 13. Configure Nginx (TODO)
 
+## Ports
+
+- infrastructure service: 10100
+- strife backend: 10101
+
 ## Roadmap
 - webserver for webhooks
 - configuration in this repo
